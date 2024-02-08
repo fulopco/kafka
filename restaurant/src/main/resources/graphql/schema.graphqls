@@ -1,0 +1,18 @@
+type Query {
+    getAllFoods: [FoodResponse]!
+    getFood(id: Int): FoodResponse!
+    order(id: Int): String
+}
+
+type Mutation{
+    createFood(name: String,  price: Int): FoodResponse!
+    updateFood(uuid: String, name: String price: Int): FoodResponse!
+    deleteFood(uuid: String): FoodResponse!
+}
+
+type FoodResponse{
+    id: Int
+    uuid: String
+    name: String
+    price: Int
+}
